@@ -1,12 +1,10 @@
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Malish Shrestha
+
 =======================================================================================================================================
 
 Web Developer
 -------------
 
-* 🌍  I'm based in Nepal
-* ✉️  You can contact me at [malish.shrestha@deerwalk.edu.np](mailto:malish.shrestha@deerwalk.edu.np)
-* 🧠  I'm learning Three.js, Next.js, TensorFlow
+
 
 ### Skills
 
