@@ -36,7 +36,7 @@ jobs:
 
       - name: Commit Metrics
         if: |
-          steps.generate-full-year-calendar-metrics.outputs.output_action == 'commit' ||
+          steps.generate-full-year-calendar-metrics.outputs.output_action == 'commit'
         uses: EndBug/add-and-commit@v9
         with:
           add: 'metrics'
