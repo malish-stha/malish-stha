@@ -21,19 +21,28 @@ jobs:
       contents: write
 
     steps:
-      - name: Generate Metrics
+      - name: Generate Full-year Calendar Metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          # Add your preferred output action here
           output_action: 'commit'
           filename: metrics.plugin.isocalendar.fullyear.svg
           base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          
+
+      - name: Generate Full History Calendar Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          output_action: 'commit'
+          filename: metrics.plugin.calendar.full.svg
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
+
       - name: Commit Metrics
-        if: ${{ steps.generate-metrics.outputs.output_action == 'commit' }}
+        if: ${{ steps.generate-full-year-calendar-metrics.outputs.output_action == 'commit' || steps.generate-full-history-calendar-metrics.outputs.output_action == 'commit' }}
         uses: EndBug/add-and-commit@v9
         with:
           add: 'metrics'
