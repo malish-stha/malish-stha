@@ -22,6 +22,7 @@ jobs:
 
     steps:
       - name: Generate Full-year Calendar Metrics
+        id: generate-full-year-calendar-metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -32,6 +33,7 @@ jobs:
           plugin_isocalendar_duration: full-year
 
       - name: Generate Full History Calendar Metrics
+        id: generate-full-history-calendar-metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -42,6 +44,7 @@ jobs:
           plugin_calendar_limit: 0
 
       - name: Generate Succinct Report with PWA Metrics
+        id: generate-succinct-report-with-pwa-metrics
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.pagespeed.svg
@@ -52,8 +55,33 @@ jobs:
           plugin_pagespeed_url: https://lecoq.io
           plugin_pagespeed_pwa: yes
 
+      - name: Generate Featured Repositories Metrics
+        id: generate-featured-repositories-metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.repositories.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_featured: lowlighter/metrics
+
+      - name: Generate Pinned Repositories Metrics
+        id: generate-pinned-repositories-metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.repositories.pinned.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_pinned: 2
+
       - name: Commit Metrics
-        if: ${{ steps.generate-full-year-calendar-metrics.outputs.output_action == 'commit' || steps.generate-full-history-calendar-metrics.outputs.output_action == 'commit' || steps.generate-succinct-report-with-pwa-metrics.outputs.output_action == 'commit' }}
+        if: |
+          steps.generate-full-year-calendar-metrics.outputs.output_action == 'commit' ||
+          steps.generate-full-history-calendar-metrics.outputs.output_action == 'commit' ||
+          steps.generate-succinct-report-with-pwa-metrics.outputs.output_action == 'commit' ||
+          steps.generate-featured-repositories-metrics.outputs.output_action == 'commit' ||
+          steps.generate-pinned-repositories-metrics.outputs.output_action == 'commit'
         uses: EndBug/add-and-commit@v9
         with:
           add: 'metrics'
