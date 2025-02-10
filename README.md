@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Malish</h1>
-- 🔭 I’m currently working on [Dream-Shop](https://github.com/malish-stha/dream-shop)
+- 🔭 I’m currently working on Url-shortener (https://github.com/malish-stha/url-shortener)
 
 ## 🌐 Socials:
 [![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/malishshrestha) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/malish-shrestha) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@@mmalishshrestha) [![Codepen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/malish) 
