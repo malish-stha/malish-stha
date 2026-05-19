@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm Malish Shrestha
 
-**Full-Stack Developer | UI/UX Enthusiast | Open Source Contributor**
+**Full-Stack Developer | Software Engineer | 3D Web Development Enthusiast**
 
 ### 🌐 Connect With Me
 
