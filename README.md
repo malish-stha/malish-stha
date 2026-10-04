@@ -1,8 +1,8 @@
-<a href="https://www.malishs.tech/"><img src="./assets/header.svg" alt="Malish Shrestha — full-stack engineer, Kathmandu" width="100%" /></a>
+<a href="https://www.malishs.tech/"><img src="./assets/header.svg" alt="Malish Shrestha — full-stack and AI engineer, Kathmandu" width="100%" /></a>
 
-I build web systems that have to stay correct under load, like two people booking the same parking spot at the same millisecond. I also build the interfaces on top of them, sometimes in 3D. I'm based in Kathmandu.
+I build systems that have to stay correct under load, like two people booking the same parking spot at the same millisecond, and the interfaces on top of them, sometimes in 3D. I'm based in Kathmandu.
 
-Right now I'm an **Associate Software Engineer at CedarGate Technologies** and a **Full-Stack Developer at Pixelvirt Technology**.
+At **PixelVirt Technologies** I'm an Associate Software Engineer working on private-cloud infrastructure: Go services for OpenStack, Kubernetes and Ansible automation, plus VM migrations, with VMware next. Lately I've also been building MCP servers and AI agents ([kagent](https://kagent.dev)) on top of that stack.
 
 &nbsp;
 
@@ -36,9 +36,10 @@ A plane follows a Catmull-Rom spline through a procedural sky, and your scroll p
 
 ```text
 interface   next.js · react · three.js / r3f · gsap · tailwind · redux
-services    spring boot · go · node · electron · trpc
-data        postgres · redis · kafka · prisma · mongodb
-infra       docker · vercel · aws s3 · eureka
+services    go · spring boot · python / fastapi · node · electron · trpc
+data        postgres · mongodb · redis · mysql · kafka · rabbitmq · prisma
+ai          mcp servers · ai agents · kagent · gemini
+infra       kubernetes · openstack · ansible · kubevirt · helm · docker · vercel
 ```
 
 &nbsp;

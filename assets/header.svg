@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Malish Shrestha — full-stack engineer, Kathmandu">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1b2029"/>
+    </pattern>
+    <g id="slab">
+      <polygon points="-110,0 0,63.5 0,79.5 -110,16" fill="#10141a"/>
+      <polygon points="110,0 0,63.5 0,79.5 110,16" fill="#0d1116"/>
+      <polygon points="0,-63.5 110,0 0,63.5 -110,0" fill="#151a21"/>
+    </g>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .dim { fill: #6b7380; }
+    .mid { fill: #9aa3ad; }
+    .acc { fill: #f5a524; }
+  </style>
+
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="14" fill="#0c0e12" stroke="#1f242c"/>
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="14" fill="url(#dots)"/>
+
+  <!-- crop marks -->
+  <g stroke="#3a4250" stroke-width="1.5" fill="none">
+    <path d="M24 44 V24 H44"/><path d="M1156 24 H1176 V44"/>
+    <path d="M24 356 V376 H44"/><path d="M1176 356 V376 H1156"/>
+  </g>
+
+  <!-- identity -->
+  <text x="60" y="66" font-size="16" letter-spacing="2" class="dim">SPECIMEN 000 // OPERATOR</text>
+  <text x="56" y="152" font-size="76" font-weight="700" letter-spacing="4" fill="#e8eaed">MALISH</text>
+  <text x="56" y="232" font-size="76" font-weight="700" letter-spacing="4" fill="#e8eaed">SHRESTHA</text>
+  <text x="60" y="282" font-size="22" class="acc">full-stack &amp; AI engineer</text>
+  <text x="60" y="314" font-size="17" class="mid">cloud infra in go · ai agents &amp; mcp · 3D in the browser</text>
+
+  <text x="60" y="362" font-size="14" letter-spacing="1" class="dim" xml:space="preserve">BASE KATHMANDU 27.71°N 85.32°E   UPLINK 2023→   STATUS <tspan fill="#3ddc84">●<animate attributeName="fill-opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></tspan><tspan fill="#3ddc84"> SHIPPING</tspan></text>
+
+  <!-- isometric stack: drawn bottom-up so upper layers occlude lower -->
+  <g stroke="#3a4250" stroke-width="1.5" stroke-linejoin="round">
+    <use href="#slab" transform="translate(900 260)"/>
+    <use href="#slab" transform="translate(900 185)"/>
+  </g>
+  <g stroke="#f5a524" stroke-width="1.5" stroke-linejoin="round">
+    <use href="#slab" transform="translate(900 110)"/>
+  </g>
+  <text x="900" y="115" font-size="13" text-anchor="middle" class="dim">L1</text>
+  <text x="900" y="190" font-size="13" text-anchor="middle" class="dim">L2</text>
+  <text x="900" y="265" font-size="13" text-anchor="middle" class="dim">L3</text>
+
+  <!-- data bus + packet -->
+  <line x1="900" y1="124" x2="900" y2="250" stroke="#f5a524" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"/>
+  <circle cx="900" r="4" fill="#f5a524">
+    <animate attributeName="cy" values="122;252" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- layer callouts -->
+  <g stroke="#3a4250" stroke-width="1.5">
+    <line x1="1014" y1="110" x2="1030" y2="110"/>
+    <line x1="1014" y1="185" x2="1030" y2="185"/>
+    <line x1="1014" y1="260" x2="1030" y2="260"/>
+  </g>
+  <text x="1036" y="106" font-size="13" letter-spacing="1" class="acc">INTERFACE</text>
+  <text x="1036" y="124" font-size="13" class="mid">next · r3f · gsap</text>
+  <text x="1036" y="181" font-size="13" letter-spacing="1" class="dim">SERVICES</text>
+  <text x="1036" y="199" font-size="13" class="mid">go · spring · node</text>
+  <text x="1036" y="256" font-size="13" letter-spacing="1" class="dim">DATA</text>
+  <text x="1036" y="274" font-size="13" class="mid">pg · redis · kafka</text>
+</svg>
