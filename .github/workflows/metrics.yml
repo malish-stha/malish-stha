@@ -1,60 +1,46 @@
 name: Metrics
 
 on:
-  # Schedule daily updates
   schedule:
     - cron: "0 0 * * *"
-  # Optional: Run workflow manually
   workflow_dispatch:
-  # Optional: Run workflow when pushing on master/main
   push:
     branches:
-      - master
       - main
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: production
     permissions:
       contents: write
 
     steps:
-      - name: Generate Full-year Calendar Metrics
-        id: generate-full-year-calendar-metrics
+      # lowlighter/metrics commits the SVG to the repo itself (output_action: commit)
+      - name: Generate full-year isometric calendar
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          output_action: 'commit'
+          output_action: commit
+          committer_message: "chore: update isocalendar"
           filename: metrics.plugin.isocalendar.fullyear.svg
           base: ""
+          config_timezone: Asia/Kathmandu
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-    
-
-      - name: Commit Metrics
-        if: |
-          steps.generate-full-year-calendar-metrics.outputs.output_action == 'commit'
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: 'metrics'
-          message: 'Update metrics'
-          author_name: 'github-actions'
-          author_email: 'actions@github.com'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Snake
+      # Amber palette to match assets/header.svg
+      - name: Generate snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: dist/snake.svg?palette=github-dark
+          outputs: |
+            dist/snake-dark.svg?color_snake=#f5a524&color_dots=#161b22,#3d2a08,#7a5310,#b87a14,#f5a524
+            dist/snake-light.svg?color_snake=#b45309&color_dots=#ebedf0,#fde68a,#fbbf24,#d97706,#92400e
 
-
-      - name: push snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Push snake to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
