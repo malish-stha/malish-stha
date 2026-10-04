@@ -1,86 +1,80 @@
-<div align="center">
+<a href="https://www.malishs.tech/"><img src="./assets/header.svg" alt="Malish Shrestha — full-stack engineer, Kathmandu" width="100%" /></a>
 
-# 👋 Hi, I'm Malish Shrestha
+I build web systems that have to stay correct under load, like two people booking the same parking spot at the same millisecond. I also build the interfaces on top of them, sometimes in 3D. I'm based in Kathmandu.
 
-**Full-Stack Developer | Software Engineer | 3D Web Development Enthusiast**
+Right now I'm an **Associate Software Engineer at CedarGate Technologies** and a **Full-Stack Developer at Pixelvirt Technology**.
 
-### 🌐 Connect With Me
+&nbsp;
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20My%20Work-blue?style=for-the-badge&logo=chrome)](https://malish-portfolio.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/malish-shrestha)
-[![Behance](https://img.shields.io/badge/Behance-Explore-1769ff?style=for-the-badge&logo=behance)](https://behance.net/malishshrestha)
-[![Medium](https://img.shields.io/badge/Medium-Follow-12100E?style=for-the-badge&logo=medium)](https://medium.com/@mmalishshrestha)
-[![CodePen](https://img.shields.io/badge/CodePen-Explore-000000?style=for-the-badge&logo=codepen)](https://codepen.io/malish)
+## Index · 005 specimens
 
-</div>
+### `005` [Crema](https://github.com/malish-stha/crema) — operating system for independent cafés
+White-label and multi-tenant, built from 12 modules: QR ordering, a barista kitchen display, a 3D floor map, inventory, rostering, loyalty and cash reconciliation. My favourite part is a small loop. When a barista marks an ingredient out of stock on the kitchen display, every dish that uses it disappears from the customer's QR menu, so nobody has to remember to update it.
+<br/><sub>`next 16` `react 19` `prisma` `nextauth` `three.js` `gsap` · [live →](https://crema-phi.vercel.app)</sub>
 
----
+### `004` [Nuvio](https://github.com/malish-stha/nuvio) — desktop workspace for chat and voice
+An Electron app (Nextron wrapping Next.js 16) with WebRTC voice and Pusher for presence. The API isn't bundled into the binary. It runs as serverless functions on Vercel, so backend changes ship without a new desktop build.
+<br/><sub>`electron` `webrtc` `prisma` `neon postgres` `upstash redis` `clerk` · [live →](https://nuvio-wine.vercel.app)</sub>
 
-## 🎯 About Me
+### `003` [AltFinder](https://github.com/malish-stha/altFinder) — open-source alternatives to paid software
+Spring Boot 3.3 on Java 21 behind a Next.js 16 front end. Gemini 2.5 Flash drafts the comparison tables and reviews. GitHub stars and activity are fetched live, not stored as snapshots that go stale. Clerk tokens are verified against JWKS inside Spring Security, with rate limiting in front.
+<br/><sub>`spring boot` `java 21` `next 16` `redux toolkit` `supabase` `gemini` `docker` · [live →](https://alt-finder-zeta.vercel.app)</sub>
 
-Passionate full-stack developer with expertise in building modern web applications. I enjoy solving complex problems, writing clean code, and creating engaging user experiences. Always learning and exploring new technologies.
+### `002` [Parkly](https://github.com/malish-stha/parkly) — event-driven parking reservations
+You pick a spot on a map and hold it. Behind the map, a gateway, a parking service and a payment service talk over Kafka. When two people tap the same spot at once, a pessimistic write lock on the row means exactly one of them gets it. Unpaid holds expire after 15 minutes: a scheduler sweeps every 10 seconds and publishes the release back to Kafka.
+<br/><sub>`spring boot` `kafka` `eureka` `postgres` `redis` `next.js` `leaflet` `three.js` · [live →](https://parkly-nu.vercel.app)</sub>
 
----
+### `001` [Atmos clone](https://github.com/malish-stha/atmosClone) — a flight you control by scrolling
+A plane follows a Catmull-Rom spline through a procedural sky, and your scroll position drives the camera. Built with React Three Fiber, Lamina shaders and post-processing. It's adapted from Wawa Sensei's tutorial, and the plane model is by Ab.316 (CC-BY-4.0).
+<br/><sub>`react three fiber` `three.js` `lamina` `vite` · [live →](https://atmos-clone-bice.vercel.app)</sub>
 
-## 💻 Tech Stack
+<sub>Also on the bench: [vocalith](https://github.com/malish-stha/vocalith) (AI text-to-speech), [fitness-app](https://github.com/malish-stha/fitness-app) (Spring Cloud with Keycloak), [stock-crypto](https://github.com/malish-stha/stock-crypto) (Go backend), [dream-shop](https://github.com/malish-stha/dream-shop).</sub>
 
-### Frontend Development
+&nbsp;
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![MUI](https://img.shields.io/badge/MUI-007FFF?style=flat-square&logo=mui&logoColor=white)
-![Redux](https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=redux&logoColor=white)
-![React Router](https://img.shields.io/badge/React%20Router-CA4245?style=flat-square&logo=react-router&logoColor=white)
+## Chassis
 
-### Backend & Database
+```text
+interface   next.js · react · three.js / r3f · gsap · tailwind · redux
+services    spring boot · go · node · electron · trpc
+data        postgres · redis · kafka · prisma · mongodb
+infra       docker · vercel · aws s3 · eureka
+```
 
-![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=flat-square&logo=node.js&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens&logoColor=white)
+&nbsp;
 
-### Build Tools & Package Managers
+## Live telemetry
 
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-![NPM](https://img.shields.io/badge/NPM-CB3837?style=flat-square&logo=npm&logoColor=white)
-![PNPM](https://img.shields.io/badge/PNPM-4A4A4A?style=flat-square&logo=pnpm&logoColor=F69220)
+<p align="center">
+  <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=malish-stha&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&custom_title=GITHUB%20%2F%2F%20SIGNAL&bg_color=0c0e12&title_color=f5a524&text_color=9aa3ad&icon_color=f5a524&ring_color=f5a524&border_color=1f242c&border_radius=14" />
+  <img height="165" alt="Language mix" src="https://github-readme-stats.vercel.app/api/top-langs/?username=malish-stha&layout=compact&langs_count=8&custom_title=LANGUAGE%20MIX&bg_color=0c0e12&title_color=f5a524&text_color=9aa3ad&border_color=1f242c&border_radius=14" />
+</p>
 
----
+<p align="center">
+  <img alt="Contribution streak" src="https://streak-stats.demolab.com/?user=malish-stha&background=0C0E12&border=1F242C&stroke=1F242C&ring=F5A524&fire=F5A524&currStreakNum=E8EAED&sideNums=E8EAED&currStreakLabel=F5A524&sideLabels=9AA3AD&dates=6B7380&border_radius=14" />
+</p>
 
-## 📊 GitHub Stats
+<p align="center">
+  <img alt="Trophies" src="https://github-trophies.vercel.app/?username=malish-stha&theme=gruvbox&no-frame=true&no-bg=true&margin-w=8&column=6&row=1" />
+</p>
 
-<div align="center">
+<details>
+<summary><code>expand</code> a full year of commits, in isometric</summary>
+<br/>
+<p align="center">
+  <img width="100%" alt="Full-year isometric contribution calendar" src="./metrics.plugin.isocalendar.fullyear.svg" />
+</p>
+</details>
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=malish-stha&theme=nightowl&hide_border=false)<br/>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malish-stha/malish-stha/output/snake-dark.svg" />
+    <img width="100%" alt="Snake eating the contribution graph" src="https://raw.githubusercontent.com/malish-stha/malish-stha/output/snake-light.svg" />
+  </picture>
+</p>
 
-</div>
+&nbsp;
 
----
+## Contact
 
-## 🏆 Achievements
-
-<div align="center">
-
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=malish-stha&theme=radical&no-frame=false&no-bg=true&margin-w=4&row=1)
-
-</div>
-
----
-
-## 📈 Activity Metrics
-
-![Full-year Calendar Metrics](metrics.plugin.isocalendar.fullyear.svg)
-
----
-
-<div align="center">
-
-**Feel free to reach out for collaboration or just a friendly chat!** 💬
-
-</div>
+[malishs.tech](https://www.malishs.tech/) · [linkedin](https://linkedin.com/in/malish-shrestha) · [x](https://x.com/MalishShrestha) · [medium](https://medium.com/@mmalishshrestha) · [behance](https://behance.net/malishshrestha) · [codepen](https://codepen.io/malish) · mmalishshrestha@gmail.com
