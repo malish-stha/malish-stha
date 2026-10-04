@@ -20,6 +20,7 @@ jobs:
       # lowlighter/metrics commits the SVG to the repo itself (output_action: commit)
       - name: Generate full-year isometric calendar
         uses: lowlighter/metrics@latest
+        continue-on-error: true
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           output_action: commit
